@@ -1,0 +1,75 @@
+### System Configuration
+ResultDir   result/
+WorkSpace   run/
+SVMDir      tools/libsvm/
+nThreads    8
+Verbose     true
+EarlyStop   false
+
+Models       SimpleBAPPIN;
+DataSets     LEDA-YY25;
+
+GOITR        0
+
+BAPPIN-MaxRound     1000
+BAPPIN-RemainRatio  0.6
+BAPPIN-RandomSample 100
+BAPPIN-TopSample    100
+BAPPIN-Seed         NETAL
+BAPPIN-Alignment    Greedy
+BAPPIN-Candidate    true
+BAPPIN-AnchorSize   0
+BAPPIN-Target       NO
+
+### DataSet Configuration
+LEDA-Toy    data/toy/
+LEDA-YY0    data/yeast/lowconf0/
+LEDA-YY5    data/yeast/lowconf5/
+LEDA-YY10    data/yeast/lowconf10/
+LEDA-YY15    data/yeast/lowconf15/
+LEDA-YY20    data/yeast/lowconf20/
+LEDA-YY25    data/yeast/lowconf25/
+LEDA-MM     data/isorank_self/mm/
+LEDA-CE    data/isorank_self/ce/
+LEDA-SC     data/isorank_self/sc/
+LEDA-DM     data/isorank_self/dm/
+LEDA-HS     data/isorank_self/hs/
+LEDA-MMCE  data/isorank_cross/mm-ce/
+LEDA-MMSC  data/isorank_cross/mm-sc/
+LEDA-MMDM  data/isorank_cross/mm-dm/
+LEDA-MMHS  data/isorank_cross/mm-hs/
+LEDA-CESC  data/isorank_cross/ce-sc/
+LEDA-CEDM  data/isorank_cross/ce-dm/
+LEDA-CEHS  data/isorank_cross/ce-hs/
+LEDA-SCDM  data/isorank_cross/sc-dm/
+LEDA-SCHS  data/isorank_cross/sc-hs/
+LEDA-DMHS  data/isorank_cross/dm-hs/
+
+LEDA-MCE    data/MI_GRAAL/c-e/
+LEDA-meso_syne    data/MI_GRAAL/m-s/
+LEDA-yeast_human    data/MI_GRAAL/y-h/
+
+### Algorithm Configuration
+MAGNAPP-Path       tools/MAGNA/src/magna
+MAGNAPP-Target      EC
+MAGNAPP-Population  15000
+MAGNAPP-Generation  2000
+
+GREAT-Path          tools/GREAT/
+GREAT-Alpha         0.5
+GREAT-Method        G_H
+
+ISORANK-Path        tools/ISORANK/
+ISORANK-Method      isorank
+ISORANK-K           30
+ISORANK-thresh      1e-4
+ISORANK-alpha       0.9
+ISORANK-maxveclen   1000000
+
+GRAAL-Path          tools/GRAAL/
+GRAAL-Alpha         1
+GRAAL-Verbose       false
+
+### Evaluation Configuration
+Metrics      CommonEdge;NodePrecision;ICS;S3;
+
