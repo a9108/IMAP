@@ -9,13 +9,13 @@ The IMAP framework follows the idea that an imperfect alignment actually contain
 
 In our framework, we extract the hidden information in seed alignment by generating the followings based on the seed alignment in each iteration: (1) candidate pairs, (2) pairwise training data and (3) pairwise features. Using these, we then learn a classification model indicating whether two nodes should be aligned. Applying it over the candidate set we generate pairwise likelihood for each candidate pair. Then we employ pairwise-score-based aligning algorithms to generate the improved alignment, which will be used as the seed alignment for next iteration. We show the overview in the following figure.
 
-![](http://apex.sjtu.edu.cn/public/files/projects/20161022/bappin.png)
+![](http://apex.sjtu.edu.cn/public/files/projects/20170121/bappin.png)
 
 ## Results
 
-![](http://apex.sjtu.edu.cn/public/files/projects/20161022/result-A.png)
+![](http://apex.sjtu.edu.cn/public/files/projects/20170121/resultA.png)
 
-![](http://apex.sjtu.edu.cn/public/files/projects/20161022/result-B.png)
+![](http://apex.sjtu.edu.cn/public/files/projects/20170121/resultB.png)
 
 # Contacts
 [Xuezhi Cao](http://apex.sjtu.edu.cn/members/cxz "Xuezhi Cao")
